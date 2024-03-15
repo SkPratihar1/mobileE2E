@@ -1,6 +1,7 @@
+// import lo from './src/spec'
 export const DEFAULT_PORT = 4723;
 export const config: CodeceptJS.MainConfig = {
-  tests: './*_test.ts',
+  tests: './src/spec/*_test.ts',
   output: './output',
   helpers: {
     Appium: {
