@@ -1,14 +1,19 @@
+export const DEFAULT_PORT = 4723;
 export const config: CodeceptJS.MainConfig = {
   tests: './*_test.ts',
   output: './output',
   helpers: {
     Appium: {
+      appiumV2: true,
+      app: '/Users/it062305/dev/learning/app-release.apk',
       platform: 'Android',
+      port: DEFAULT_PORT,
+      path: '/wd/hub',
       keepCookies: true,
       restart: false,
       waitForTimeout: 80000,
       desiredCapabilities: {
-        app: '/Users/it062305/dev/learning/app-release.apk',
+        // app: '/Users/it062305/dev/learning/app-release.apk',
         platform: 'Android',
         device: 'emulator-5554',
         appPackage:"com.carpooling",
